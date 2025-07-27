@@ -65,6 +65,7 @@ endif()
 add_library(webgpu_glfw ALIAS dawn_glfw)
 
 if (DAWN_ENABLE_INSTALL)
-    dawn_install_target(webgpu_glfw)
+    add_library(dawn::webgpu_glfw ALIAS dawn_glfw)
+    dawn_install_target(dawn_glfw)
 endif()
 
