@@ -63,3 +63,8 @@ if(BUILD_SHARED_LIBS)
 endif()
 
 add_library(webgpu_glfw ALIAS dawn_glfw)
+
+if (DAWN_ENABLE_INSTALL)
+    dawn_target_install(webgpu_glfw)
+endif()
+
